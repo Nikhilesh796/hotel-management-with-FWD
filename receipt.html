@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RECIEPT</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Lumanosimo&display=swap");
+      body {
+        background-image: url("https://img.freepik.com/free-photo/beautiful-luxury-swimming-pool_74190-2050.jpg?w=740&t=st=1689942986~exp=1689943586~hmac=33ca61c3347a9fd9073cb2a076f3baa01f959ca61b48a0ed95c9ca7bd14c00ee");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #top {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      h2 {
+        font-size: 110px;
+        background: -webkit-linear-gradient(#f9f295, #e0aa3e, #faf398, #b88a44);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 2cm;
+        font-family: Courier, monospace;
+      }
+      #pro {
+        background: none;
+        border: none;
+        margin-right: 1cm;
+      }
+      #profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #nam {
+        font-size: xx-large;
+        margin-right: 1cm;
+        font-family: playfair;
+        color: black;
+      }
+      #content {
+        height: 11cm;
+        width: 15cm;
+        padding: 0.75cm;
+        margin-left: 2cm;
+        background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220821/pngtree-shiny-wave-gold-white-background-png-free-image_1442692.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #hname {
+        font-size: 70px;
+        background: -webkit-linear-gradient(#f9f295, #e0aa3e, #faf398, #b88a44);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: center;
+        font-family: Courier, monospace;
+      }
+      #info {
+        font-size: larger;
+        font-family: playfair;
+      }
+      #greeting {
+        font-size: x-large;
+        text-align: center;
+      }
+      #foot {
+        font-size: medium;
+        float: right;
+      }
+      #photoes {
+        height: 10cm;
+        width: 10cm;
+        margin-left: 5cm;
+      }
+      #m {
+        height: 10cm;
+        width: 10cm;
+        margin-right: 7cm;
+        border-radius: 25px;
+      }
+      #one {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      #nav{
+        margin-top: 0.75cm;
+        height: 1.5cm;
+        width: 10cm;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: chocolate;
+        padding: 0px 0.75cm;
+        border-radius: 25px;
+      }
+      #home1,#contact1,#logout1{
+        height: 0.75cm;
+        width: 2.5cm;
+        background: none;
+        border: none;
+        font-size: medium;
+      }
+      #home1:hover,#contact1:hover,#logout1:hover{
+        background-color: rgb(40, 38, 38);
+        border-radius: 10px;
+        color: white;
+      }
+    hr{
+        border: 1px solid black;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="top">
+      <div id="h">
+        <h2>RYZEN</h2>
+      </div>
+      <div id="nav">
+        <a href="" id="home"><button type="button" id="home1" >Home</button></a>
+        <a href="" id="contact"><button type="button" id="contact1">Contact Us</button></a>
+        <a href="" id="logout"><button type="button" id="logout1">Logout</button></a>
+      </div>
+      <div id="profile">
+        <h4 id="nam"></h4>
+        <button type="button" id="pro">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFg0lEQVR4nO2aW4hWVRTHf5PpTNCVEYOG0BzzEqZm0dRDL5GZ2oWksB4iosyggiC6UvYQBZWmkk5o1FMS3TPNkrJCk8os6EG7mU0pg0zjZGjkjDZfLFgHNtt9ztlnn/19o3D+sGAu+7/Wvpy912VvqFChQoUKFeqNCcAC4EVgI7AT6AMGVPr0b/K/Tm07nuMcU4DFwG6gFih/AItU13GBJmAOsKXEoNPkC2C22jgmcSHwdR0GbsuXwHSOIbQAS4EjGZ0+AKwHHgau1jPhDGC4ivw8EbhG23yonDR9YmsJ0DzUgx8HfJfSyUEdyI06SUUhnHmqYzDFxrdAO0OES4F9KR17G5ga0dY04N0UW71ABw3GlcBBR2fElc2oo92rgF8ddg/W2e5RK/+PoxOvAafih7OAm4GFwMvAJ8CPwC6NCfpUp5wVNsTG6ymT0NGIPb/PYfxxD+5FwAvADwVO/Acy9D3haP8nMJY6oSXlwLsnh3e+rnCIy9uco/teB+ebenmHpQ5jj+Vwbgf+LeHzxd2NzLHh+hIkeowe5Bxx7PkszM9wX0XkVo/+vWFxDqvniIImR4S3M+fAk9j9UITBi/Ro0JMVS5ymB6gdOkfBHEenxA1m4aNIgzdFDtAszHJwZsaYgC2OICcL50b69G0ZUPeZhfcszqayg59qKRz0iPAerMPgE7kjx/YFjsmfXGYCFlvKJKGh4Cq8CowGbgGWARuAn3RvH1IvsRfYAbwJPARMAp53TMArHvY3WJxny0zAbkuZJDZ52GG0F8/RFmj7BGCbZf97D95NFqcr0D4TLEUHPLO6/QbnM8rH/mYfuj04JzlCdYlgC+OugM8fPawSznOUg3wFewx9smUI2AZ3hhjvtJTI3vSByZGEpyxesnT64BGLszzE8EZLiVRyfGByYtQEbguYgGstzschhn+zlPiWqU1O6AFo4rKACZhocaSGUBi9lpJWT57JkQOpLNoCJmCkI00ujH5LyQgPzuUWJ0YJe4SlU2zkodni+B6emRPQXPDcWE08rDb0Sm0hDy0xJqDXUjLKg/O30V6iv1gYY+gVG3k4M8YW2GUpcdXnbPwVcGYU3dMSOudhkiN9L+0Gr/PgfGW0F18cC49adwF5uD6GG+wMKHzOtzgrKY+Vlk4ps+VhYYxAaIGlRG5o8nAisNbg/FeyStuuOhJ976sNChZkZGEKY7ylRPbeyR48uev7wOBJSh2KJYaedao7D6c4ynFByRB6P28qugE/XGJNnFSJQhbArCj7XnrMi5UOo+VlU9mn+GOtVZryWb0Ew/VOIOGvKcD93OrzM5TAFEtZrcBrjXOMK66iB+Iqg9encUBICa90SQwtL9esvUiBrMys0S3LCY+btE3SflDfDPhifeyiKPospUy5eZ3FXZMSJLXq/0Ine3ZA+d4LTfosxVQsqfLpfnTnHcEereMnmGVVfhIRrg/khcnvBe8VC2G642rsLU/uVsfAfEW4Pgv0juNqLOYDjaN8ciJPko2ztZCZtL9bS+BpA96rbZLfu1VHFp5y6Clbi3Si2VGmFrnP0Xa0Poq0U+pWzSqXW9Xj/fq3UdrG5PSrLld2eX/KV+NTuwhCuyNNrukqNKm7WuUYeHKiD/OwMSzlaq1fdY9RW0872vSo+60rOlLeB22zSuK2yCr7wvw6bBlI+RLl3uJiGoQZKZOQJVJfCK1F5IkM/goajA6ttPh2cnuBLbC9gN6eRq68jbH6Jse3s93qTeYC52nFt01/nqvPcEyvkSdbG7HnfbzDIvW9tQbJYXV1dTvtQzDNkTfUQzbXI8iJiZmahMQe+KZYsX2jMFkfJ3SVGHSX5vOlU9qhxjity63QCu0v+uK0X0V+/ln/t0KfwgSXsSpUqFChQgW88D8YlxB821s5jAAAAABJRU5ErkJggg=="
+          />
+        </button>
+      </div>
+    </div>
+    <div id="one">
+      <div id="content">
+        <div id="head">
+          <h3 id="hname">RYZEN</h3>
+        </div>
+        <hr />
+        <div id="receipt">
+          <p id="info">Name : <span id="na"></span></p>
+          <p id="info">Check-In : <span id="checkin"></span></p>
+          <p id="info">Check-Out : <span id="checkout"></span></p>
+          <p id="info">Room Number : <span id="roomm"></span></p>
+          <p id="info">
+            Booking date&time : <span id="dt"></span>
+          </p>
+        </div>
+        <hr />
+        <div id="greet">
+          <p id="greeting" style="font-family: cursive">
+            Have a wonderful stay at the Ryzen Hotel
+          </p>
+          <footer id="foot">
+            <p>from Ryzen hotel</p>
+          </footer>
+        </div>
+      </div>
+      <div id="photoes">
+        <marquee behavior="scrolling" direction="left" scrollamount="15">
+          <img
+            src="https://skift.com/wp-content/uploads/2018/03/NaumiHotel-RECEPTION-72dpi-013.jpg"
+            alt=""
+            id="m"
+          />
+          <img
+            src="https://www.travelandleisure.com/thmb/BJupPeakYV7RY_vQQnmvrKAl7LU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/soneva-jani-sunset-view-maldives-SONEVA0421-74b37591d80441ce87831a41da518e49.jpg"
+            alt=""
+            id="m"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bHV4dXJ5JTIwaG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+            alt=""
+            id="m"
+          />
+          <img
+            src="https://media.cntraveler.com/photos/53da828b6dec627b149eeee6/16:9/w_2580,c_limit/fairmont-kea-lani-hawaii-maui.jpg"
+            alt=""
+            id="m"
+          />
+          <img
+            src="https://cdn.tatlerasia.com/asiatatler/i/hk/2021/07/07032140-most-expensive-hotel-rooms-suites-in-the-world-wilson3_cover_2000x1334.jpeg"
+            alt=""
+            id="m"
+          />
+          <img
+            src="https://media.istockphoto.com/id/187945130/photo/woodland-hotel-dining-room.jpg?s=612x612&w=0&k=20&c=H5IKjc5G0zYN1iqfC5m1DGFcbsc3M_noeN-vou15WbQ="
+            alt=""
+            id="m"
+          />
+          <img
+            src="https://static1.eskypartners.com/travelguide/rodzaje-posilkow-w-hotelu.jpg"
+            alt=""
+            id="m"
+          />
+          <img
+            src="https://www.eroshotels.co.in/wp-content/uploads/2020/03/outdoor-pool.jpg"
+            alt=""
+            id="m"
+          />
+          <img
+            src="https://d1tfdfyb9rvaxg.cloudfront.net/chedilusticabay.com-1070583806/cms/cache/v2/631567adeae70.jpg/1920x1080/fit/80/ad5ed903ba91326c18d30dc2a6d05ba9.jpg"
+            alt=""
+            id="m"
+          />
+          <img
+            src="https://www.travelandleisure.com/thmb/R4yyBqbY8h-07xivZC4K-7u6W14=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/prince-gallery-tokyo-kioicho-tokyo-japan-27-WINDOWVIEWS0320-327a07b4ceb64e739b975c525c7b4310.jpg"
+            alt=""
+            id="m"
+          />
+        </marquee>
+      </div>
+    </div>
+    <script>
+      window.addEventListener("load",()=>{
+      let userdata=new Array();
+      userdata=JSON.parse(localStorage.getItem(sessionStorage.getItem("user")));
+      document.getElementById("nam").innerHTML=userdata[0];
+      document.getElementById("na").innerHTML=userdata[0];
+      document.getElementById("checkin").innerHTML=userdata[4].checkin;
+      document.getElementById("checkout").innerHTML=userdata[4].checkout;
+      document.getElementById("roomm").innerHTML=userdata[4].room;
+      document.getElementById("dt").innerHTML=userdata[4].td;
+      });
+      document.getElementById("pro").addEventListener("click",()=>{
+        location.href="http://127.0.0.1:5500/profile.html";
+      });
+      document.getElementById("home1").addEventListener("click",()=>{
+        document.getElementById("home").setAttribute("href","http://127.0.0.1:5500/ui.html");
+      });
+      document.getElementById("contact1").addEventListener("click",()=>{
+        document.getElementById("contact").setAttribute("href","http://127.0.0.1:5500/contact.html");
+      });
+      document.getElementById("logout1").addEventListener("click",()=>{
+        sessionStorage.clear();
+        document.getElementById("logout").setAttribute("href","http://127.0.0.1:5500/interface.html");
+      });
+      
+    </script>
+  </body>
+</html>
